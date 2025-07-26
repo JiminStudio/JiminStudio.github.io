@@ -42,13 +42,24 @@ export default defineConfig({
 									{
 										label: 'Objectives',
 										items: [
-											'betonquestaddon/side/objectives',
-											"betonquestaddon/side/conditions",
+											'betonquestaddon/side/objectives'
+										],
+									},
+									{
+										label: 'Conditions',
+										items: [
+											"betonquestaddon/side/conditions"
+										],
+									},
+									{
+										label: 'Events',
+										items: [
 											"betonquestaddon/side/events"
 										],
 									},
 								],
 							},
+
 						],
 					},
 				])
