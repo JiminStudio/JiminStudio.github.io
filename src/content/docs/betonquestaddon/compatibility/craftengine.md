@@ -22,8 +22,6 @@ conditions:
 ```
 
 ## Event
-
-**Event Types:**
 - For blocks: `ceBlockAt`
 - For furniture: `ceFurnitureAt`
 
@@ -43,7 +41,6 @@ events:
   placeRubyOre: ceBlockAt namespace:ruby_ore 40;72;3;world
   placePalm: ceBlockAt default:palm_sapling 40;72;3;world playSound:true
   placeChair: ceFurnitureAt default:wooden_chair 42;72;5;world
-
 ```
 
 ## **Objectives**
@@ -86,11 +83,11 @@ These are optional, and are listed below.
 |-----------|---------|---------|---------------------|
 | `cancel`  | Boolean | false   | Event cancellation. |
 ```yaml
-# ceBlockInteract / ceFurnitureInteract <Id> [cancel:boolean]
+# ceBlockInteract / ceFurnitureInteract <Id> [cancel]
 
 objectives:
   interactBlock: ceBlockInteract default:netherite_anvil
-  interactFurniture: ceFurnitureInteract default:wooden_chair cancel:true
+  interactFurniture: ceFurnitureInteract default:wooden_chair cancel
 ``` 
 :::
 
