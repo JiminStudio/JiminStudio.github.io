@@ -19,4 +19,7 @@ bqa_block_interact: '@[legacy]&2{amount} blocks left to interact'
 bqa_furniture_break: '@[legacy]&2{amount} furnitures left to break'
 bqa_furniture_place: '@[legacy]&2{amount} furnitures left to place'
 bqa_furniture_interact: '@[legacy]&2{amount} furnitures left to interact'
+bqa_ae_book_open: '@[legacy]&aYou received {amount}'
+bqa_ae_alchemist_trade: '@[legacy]&aYou received {amount}'
+bqa_ae_tinkerer_trade: '@[legacy]&aYou received {amount}'
 ```
