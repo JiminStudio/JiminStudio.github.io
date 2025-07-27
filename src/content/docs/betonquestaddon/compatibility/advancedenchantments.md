@@ -11,18 +11,27 @@ Compatibility with AdvancedEnchantments
 
 Players must with a number of specified AdvancedEnchantments event.
 
-| Parameter | Syntax               | Default  | Explanation                       |
-|-----------|----------------------|----------|-----------------------------------|
-| `group`   | ANY, List`your File` | Required | The AdvancedEnchantments Group ID |
-| `amount`  | amount:x             | 1        | Number to event                   |
-| `notify`  | notify:number        | Disabled | Notify player with a message      |
+| Parameter | Syntax               | Default  | Explanation                                             |
+|-----------|----------------------|----------|---------------------------------------------------------|
+| `group`   | ANY, List`your File` | Required | The AdvancedEnchantments Group ID<br/>only `aeBookOpen` |
+| `amount`  | amount:x             | 1        | Number to event                                         |
+| `notify`  | notify:number        | Disabled | Notify player with a message                            |
 ```yaml
 # aeBookOpen <group> [amount:x] [notify]
+# aeTinkererTrade [amount:x] [notify]
+# aeAlchemistTrade [amount:x] [notify]
 
 objectives:
+  
   # aeBookOpen
   aeBookOpenUNIQUE: aeBookOpen UNIQUE amount:2
   aeBookOpenANY: aeBookOpen ANY amount:2 notify
+
+  # aeTinkererTrade
+  aeTinkererTrade: aeTinkererTrade
+
+  # aeAlchemistTrade
+  aeAlchemistTrade: aeAlchemistTrade
 ```
 :::note[How to get groups?]
 If you know how AE groups work, it's easy to set up.\
