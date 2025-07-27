@@ -29,11 +29,12 @@ export default defineConfig({
 							{
 								label: 'Compatibility',
 								items: [
+									'betonquestaddon/compatibility/advancedenchantments',
 									'betonquestaddon/compatibility/coinsengine',
 									'betonquestaddon/compatibility/craftengine',
 									'betonquestaddon/compatibility/headdatabase',
 									'betonquestaddon/compatibility/itemsadder',
-									'betonquestaddon/compatibility/nexo'
+									'betonquestaddon/compatibility/nexo',
 								],
 							},
 							{

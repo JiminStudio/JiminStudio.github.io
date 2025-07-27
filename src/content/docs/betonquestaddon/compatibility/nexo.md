@@ -40,36 +40,64 @@ events:
 ```
 
 ## **Objectives**
+- For Blocks: `nxBlockBreak`, `nxBlockPlace`, `nxBlockInteract`
+- For Furniture: `nxFurnitureBreak`, `nxFurniturePlace`, `nxFurnitureInteract`
 
-**Nexo Block Objectives: `nxBlockBreak`, `nxBlockPlace`**\
-Players must break or place a number of specified Nexo blocks.
+Players must break, place, or interact with a number of specified Nexo blocks or furniture.
 
-| Parameter | Syntax        | Default  | Explanation                     |
-|-----------|---------------|----------|---------------------------------|
-| `blockId` | ruby_ore      | Required | The Nexo block ID               |
-| `amount`  | amount:x      | 1        | Number of blocks to break/place |
-| `notify`  | notify:number | Disabled | Notify player with a message    |
+| Parameter | Syntax        | Default  | Explanation                    |
+|-----------|---------------|----------|--------------------------------|
+| `id`      | ruby_ore      | Required | The Nexo block or furniture ID |
+| `amount`  | amount:x      | 1        | Number to break/place/interact |
+| `notify`  | notify:number | Disabled | Notify player with a message   |
 ```yaml
+# Block objectives
 # nxBlockPlace <blockId> [amount:x] [notify:number]
 # nxBlockBreak <blockId> [amount:x] [notify:number]
+# nxBlockInteract <blockId> [amount:x] [notify:number]
 
 objectives:
-  placeRubyOre: nxBlockPlace ruby_ore amount:3
-  breakRubyOre: nxBlockBreak ruby_ore amount:5 notify:1
+  placeBlock: nxBlockPlace ruby_ore amount:3
+  breakBlock: nxBlockBreak ruby_ore amount:5 notify:1
+  interactBlock: nxBlockInteract ruby_ore
+
+  # Furniture objectives
+  # nxFurniturePlace <furnitureId> [amount:x] [notify:number]
+  # nxFurnitureBreak <furnitureId> [amount:x] [notify:number]
+  # nxFurnitureInteract <furnitureId> [amount:x] [notify:number]
+  
+  placeFurniture: nxFurniturePlace arm_chair amount:3
+  breakFurniture: nxFurnitureBreak arm_chair amount:5 notify:1
+  interactFurniture: nxFurnitureInteract arm_chair
 ```
+:::tip
+If you use **`interact`** with a **block** or **furniture**, you can provide additional arguments.\
+These are optional, and are listed below.
 
-## Item
+| Parameter | Syntax  | Default | Explanation         |
+|-----------|---------|---------|---------------------|
+| `cancel`  | Boolean | false   | Event cancellation. |
+```yaml
+# nxBlockInteract / nxFurnitureInteract <Id> [cancel]
 
+objectives:
+  interactBlock: nxBlockInteract ruby_ore
+  interactFurniture: nxFurnitureInteract arm_chair cancel
+``` 
+:::
+
+## **Item**
 Define Nexo items using the `nexo` prefix followed by the item ID.
 
 ```yaml
-# nexo ruby
+# nexo <itemId>
+
 items:
-  nexoRuby: nexo ruby
+  nxItem: nexo ruby
 
 conditions:
-  hasNexoRuby: item nexoRuby
+  hasNxItem: item nxItem
 
 events:
-  giveNexoRuby: give nexoRuby
+  giveNxItem: give nxItem
 ```

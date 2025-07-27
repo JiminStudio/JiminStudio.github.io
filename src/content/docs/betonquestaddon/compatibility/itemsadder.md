@@ -6,18 +6,18 @@ slug: betonquestaddon/compatibility/itemsadder
 
 Compatibility with ItemsAdder
 
-## Conditions
+## **Conditions**
 **ItemsAdder Block Condition: `iaBlock`**\
 Checks if a specific ItemsAdder block exists at the given location.
 
 ```yaml
 # iaBlock <blockId> <x;y;z;world>
+
 conditions:
   hasRubyOre: iaBlock namespace:ruby_ore 40;72;3;world
 ```
 
-## Events
-
+## **Events**
 **ItemsAdder Block Event: `iaBlockAt`**\
 Changes the block at the specified location to an ItemsAdder block.
 
@@ -33,13 +33,13 @@ Plays a custom ItemsAdder animation.
 ```yaml
 # iaBlockAt <blockId> <x;y;z;world>
 # iaPlayAnimation <animationID>
+
 events:
   placeRubyOre: iaBlockAt namespace:ruby_ore 40;72;3;world
   playShine: iaPlayAnimation ruby_shine
 ```
 
-## Objectives
-
+## **Objectives**
 **ItemsAdder Block Objectives: `iaBlockBreak`, `iaBlockPlace`**\
 Requires players to break or place a specific number of ItemsAdder blocks.
 
@@ -52,23 +52,24 @@ Requires players to break or place a specific number of ItemsAdder blocks.
 ```yaml
 # iaBlockPlace <blockId> [amount:x] [notify:number]
 # iaBlockBreak <blockId> [amount:x] [notify:number]
+
 objectives:
   placeRubyOre: iaBlockPlace namespace:ruby_ore amount:3
   breakRubyOre: iaBlockBreak namespace:ruby_ore amount:5 notify:1
 ```
 
-## Items
-
+## **Items**
 Define ItemsAdder items in BetonQuest using the `ia` prefix followed by the full item ID.
 
 ```yaml
-# ia namespace:ruby
+# ia namespace:id
+
 items:
-  itemsAdderRuby: ia namespace:ruby
+  iaItem: ia namespace:ruby
 
 conditions:
-  hasItemsAdderRuby: item itemsAdderRuby
+  hasIaItem: item iaItem
 
 events:
-  giveItemsAdderRuby: give itemsAdderRuby
+  giveIaItem: give iaItem
 ```

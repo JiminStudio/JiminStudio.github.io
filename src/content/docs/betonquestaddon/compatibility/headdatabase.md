@@ -6,7 +6,7 @@ slug: betonquestaddon/compatibility/headdatabase
 
 Compatibility with HeadDatabase
 
-## Conditions
+## **Conditions**
 **HeadDatabase Block Condition: `hdbBlock`**\
 Checks if a specific HeadDatabase block exists at the given location.
 
@@ -17,8 +17,7 @@ conditions:
   hasHdbBlock: hdbBlock 7129 40;72;3;world
 ```
 
-## Item
-
+## **Item**
 Define HeadDatabase items using the `hdb` prefix followed by the item ID.
 
 ```yaml

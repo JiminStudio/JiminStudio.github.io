@@ -6,7 +6,7 @@ slug: betonquestaddon/compatibility/craftengine
 
 Compatibility with CraftEngine
 
-## Conditions
+## **Conditions**
 - For Blocks: `ceBlock`
 - ~~For Furniture: `ceFurniture`~~
 
@@ -21,7 +21,7 @@ conditions:
   hasWoodenChair: ceFurniture default:wooden_chair 40;72;3;world
 ```
 
-## Event
+## **Event**
 - For blocks: `ceBlockAt`
 - For furniture: `ceFurnitureAt`
 
@@ -44,7 +44,6 @@ events:
 ```
 
 ## **Objectives**
-
 - For Blocks: `ceBlockBreak`, `ceBlockPlace`, `ceBlockInteract`
 - For Furniture: `ceFurnitureBreak`, `ceFurniturePlace`, `ceFurnitureInteract`
 
@@ -91,8 +90,7 @@ objectives:
 ``` 
 :::
 
-## Item
-
+## **Item**
 Define CraftEngine items using the `ce` prefix followed by the item ID.
 
 ```yaml

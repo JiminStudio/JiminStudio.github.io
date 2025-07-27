@@ -6,8 +6,7 @@ slug: betonquestaddon/compatibility/coinsengine
 
 Compatibility with CoinsEngine
 
-## Conditions
-
+## **Conditions**
 **CoinsEngine Coin Condition: `coins`**\
 Checks if the player has the specified amount of coins.
 
@@ -29,8 +28,7 @@ events:
 ```
 :::
 
-## Event
-
+## **Event**
 **CoinsEngine Coin Event: `coins`**\
 Adds, removes, multiplies, or sets the number of coins in the player's account.
 
@@ -51,7 +49,7 @@ events:
 
 :::note[Notify]
 If you use `notify`, the player will receive a message about the coin balance change.\
-Add the following lines to your `plugins/BetonQuest/lang/.yml` file
+Add the following lines to your `./plugins/BetonQuest/lang/.yml` file
 
 ```yaml
 bqa_coins_given: '@[legacy]&aYou received {amount}'
