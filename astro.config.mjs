@@ -27,6 +27,12 @@ export default defineConfig({
 								],
 							},
 							{
+								label: 'Common',
+								items: [
+									'betonquestaddon/common/operator'
+								],
+							},
+							{
 								label: 'Compatibility',
 								items: [
 									'betonquestaddon/compatibility/advancedenchantments',

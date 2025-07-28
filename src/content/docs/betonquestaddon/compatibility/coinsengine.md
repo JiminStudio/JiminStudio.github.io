@@ -11,10 +11,10 @@ Compatibility with CoinsEngine
 Checks if the player has the specified amount of coins.
 
 ```yaml
-# coins currencyId amount
+# coins currencyId operator amount
 
 conditions:
-  hasCoins: coins coins 100
+  hasCoins: coins == coins 100
 ```
 
 :::tip
@@ -22,7 +22,7 @@ Invert this condition if you want to check if the player has less coins than spe
 
 ```yaml
 conditions:
-  isRich: coins coins 100000
+  isRich: coins coins >= 100000
 events:
   giveSubsidy: coins coins +500 conditions:!isRich
 ```

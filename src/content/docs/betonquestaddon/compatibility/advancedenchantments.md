@@ -6,6 +6,22 @@ slug: betonquestaddon/compatibility/advancedenchantments
 
 Compatibility with AdvancedEnchantments
 
+## **Conditions**
+- `aeEnchantTotal`
+
+Checks if the player has the specified amount of Total.
+
+| Parameter | Syntax                 | Default  | Explanation                                                 |
+|-----------|------------------------|----------|-------------------------------------------------------------|
+| `group`   | `*`, String`Your File` | Required | The AdvancedEnchantments Group ID<br/>only `aeEnchantTotal` |
+```yaml
+# aeEnchantTotal enchantGroup operator amount
+
+conditions:
+  aeTotal: aeEnchantTotal fabled == 1
+  aeAllTotal: aeEnchantTotal * == 2
+```
+
 ## **Event**
 -  `aeEnchant`
 

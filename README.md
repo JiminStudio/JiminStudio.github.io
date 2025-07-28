@@ -1,2 +1,3 @@
 # JiminStudio Docs
- > like: [goto docs](https://jiminstudio.github.io/)
+
+> like: [Docs](https://jiminstudio.github.io/)
