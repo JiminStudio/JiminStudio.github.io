@@ -6,6 +6,44 @@ slug: betonquestaddon/compatibility/advancedenchantments
 
 Compatibility with AdvancedEnchantments
 
+## **Event**
+-  `aeEnchant`
+
+Powerful event with AdvancedEnchantments feature.
+
+| Parameter   | Syntax            | Default  | Explanation                                       |
+|-------------|-------------------|----------|---------------------------------------------------|
+| `name`      | String`Your File` | Required | The AE Enchantment name                           |
+| `level`     | Integer           | Required | The AE Enchantment Level                          |
+
+```yaml
+# aeEnchant <name> <level>
+
+events:
+  aeApplyEnchant: aeEnchant diploid 3
+```
+:::tip
+**Level**\
+Otherwise, check the enchantments list at `./plugins/AdvancedEnchantments/enchantments.yml`.
+```yaml
+diploid: # This part
+  display: '%group-color%Diploid'
+  ##############
+  levels:
+    '5': # x part
+      chance: 30
+      ##############
+```
+If you want to use the highest level.\
+You can set it to **`-1`** or higher than **`x`**.\
+x is the number in the `x part` like the file above.
+```yaml
+events:
+  aeApplyEnchantMax1: aeEnchant diploid -1 # is max
+  aeApplyEnchantMax2: aeEnchant diploid 99 # is max
+```
+:::
+
 ## **Objectives**
 - `aeBookOpen`
 
@@ -13,7 +51,7 @@ Players must with a number of specified AdvancedEnchantments event.
 
 | Parameter | Syntax               | Default  | Explanation                                             |
 |-----------|----------------------|----------|---------------------------------------------------------|
-| `group`   | ANY, List`your File` | Required | The AdvancedEnchantments Group ID<br/>only `aeBookOpen` |
+| `group`   | ANY, List`Your File` | Required | The AdvancedEnchantments Group ID<br/>only `aeBookOpen` |
 | `amount`  | amount:x             | 1        | Number to event                                         |
 | `notify`  | notify:number        | Disabled | Notify player with a message                            |
 ```yaml
