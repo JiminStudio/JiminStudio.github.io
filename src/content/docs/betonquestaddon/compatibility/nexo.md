@@ -7,8 +7,8 @@ slug: betonquestaddon/compatibility/nexo
 Compatibility with Nexo
 
 ## Conditions
+- nxBlock
 
-**Nexo Block Condition: `nxBlock`**\
 Checks if a specific Nexo block exists at the given location.
 
 ```yaml

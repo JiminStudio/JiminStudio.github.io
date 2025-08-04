@@ -41,6 +41,7 @@ export default defineConfig({
 									'betonquestaddon/compatibility/headdatabase',
 									'betonquestaddon/compatibility/itemsadder',
 									'betonquestaddon/compatibility/nexo',
+									'betonquestaddon/compatibility/placeholderapi',
 								],
 							},
 							{

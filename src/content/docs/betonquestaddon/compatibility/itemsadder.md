@@ -7,7 +7,8 @@ slug: betonquestaddon/compatibility/itemsadder
 Compatibility with ItemsAdder
 
 ## **Conditions**
-**ItemsAdder Block Condition: `iaBlock`**\
+- `iaBlock`
+
 Checks if a specific ItemsAdder block exists at the given location.
 
 ```yaml
@@ -18,10 +19,12 @@ conditions:
 ```
 
 ## **Events**
-**ItemsAdder Block Event: `iaBlockAt`**\
+- `iaBlockAt`
+
 Changes the block at the specified location to an ItemsAdder block.
 
-**ItemsAdder Animation Event: `iaPlayAnimation`**\
+- `iaPlayAnimation`
+
 Plays a custom ItemsAdder animation.
 
 | Parameter   | Syntax             | Default  | Description                                 |
@@ -40,8 +43,10 @@ events:
 ```
 
 ## **Objectives**
-**ItemsAdder Block Objectives: `iaBlockBreak`, `iaBlockPlace`**\
-Requires players to break or place a specific number of ItemsAdder blocks.
+- For Blocks: `iaBlockBreak`, `iaBlockPlace`, `iaBlockInteract`
+- For Furniture: `nxFurnitureBreak`, `nxFurniturePlace`, `nxFurnitureInteract`
+
+Players must break, place, or interact with a number of specified ItemsAdder blocks or furniture.
 
 | Parameter | Syntax             | Default  | Description                                |
 |-----------|--------------------|----------|--------------------------------------------|
@@ -57,6 +62,20 @@ objectives:
   placeRubyOre: iaBlockPlace namespace:ruby_ore amount:3
   breakRubyOre: iaBlockBreak namespace:ruby_ore amount:5 notify:1
 ```
+:::tip
+If you use **`interact`** with a **block** or **furniture**, you can provide additional arguments.\
+These are optional, and are listed below.
+
+| Parameter | Syntax  | Default | Explanation         |
+|-----------|---------|---------|---------------------|
+| `cancel`  | Boolean | false   | Event cancellation. |
+```yaml
+# iaBlockInteract <Id> [cancel]
+
+objectives:
+  interactBlock: iaBlockInteract namespace:ruby_ore cancel
+``` 
+:::
 
 ## **Items**
 Define ItemsAdder items in BetonQuest using the `ia` prefix followed by the full item ID.

@@ -7,11 +7,12 @@ slug: betonquestaddon/compatibility/coinsengine
 Compatibility with CoinsEngine
 
 ## **Conditions**
-**CoinsEngine Coin Condition: `coins`**\
+- `coins`
+
 Checks if the player has the specified amount of coins.
 
 ```yaml
-# coins currencyId operator amount
+# coins <currencyId> <operator> <amount>
 
 conditions:
   hasCoins: coins == coins 100
@@ -29,7 +30,8 @@ events:
 :::
 
 ## **Event**
-**CoinsEngine Coin Event: `coins`**\
+- `coins`
+
 Adds, removes, multiplies, or sets the number of coins in the player's account.
 
 | Parameter | Syntax            | Default  | Explanation                                                    |

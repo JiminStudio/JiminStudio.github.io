@@ -7,7 +7,8 @@ slug: betonquestaddon/compatibility/headdatabase
 Compatibility with HeadDatabase
 
 ## **Conditions**
-**HeadDatabase Block Condition: `hdbBlock`**\
+- `hdbBlock`
+
 Checks if a specific HeadDatabase block exists at the given location.
 
 ```yaml
