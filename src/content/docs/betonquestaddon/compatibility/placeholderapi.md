@@ -11,9 +11,9 @@ Compatibility with PlaceholderAPI
 
 Automatically detects and compares numbers and strings with optional case sensitivity.
 
-| Parameter | Syntax  | Default | Explanation                                           |
-|-----------|---------|---------|-------------------------------------------------------|
-| `amount`  | Boolean | false   | Supports optional case-insensitive string comparison. |
+| Parameter    | Syntax  | Default | Explanation                                           |
+|--------------|---------|---------|-------------------------------------------------------|
+| `ignoreCase` | Boolean | false   | Supports optional case-insensitive string comparison. |
 
 ```yaml
 # PAPI <first> <operator> <second> [options]
