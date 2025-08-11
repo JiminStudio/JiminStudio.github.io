@@ -22,4 +22,6 @@ bqa_furniture_interact: '@[legacy]&2{amount} furnitures left to interact'
 bqa_ae_book_open: '@[legacy]&aYou received {amount}'
 bqa_ae_alchemist_trade: '@[legacy]&aYou received {amount}'
 bqa_ae_tinkerer_trade: '@[legacy]&aYou received {amount}'
+bqa_lands_create: '@[legacy]&aYou received'
+bqa_lands_delete: '@[legacy]&aYou received'
 ```

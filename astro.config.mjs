@@ -39,6 +39,7 @@ export default defineConfig({
 									'betonquestaddon/compatibility/coinsengine',
 									'betonquestaddon/compatibility/craftengine',
 									'betonquestaddon/compatibility/headdatabase',
+									'betonquestaddon/compatibility/lands',
 									'betonquestaddon/compatibility/itemsadder',
 									'betonquestaddon/compatibility/nexo',
 									'betonquestaddon/compatibility/placeholderapi',
