@@ -51,21 +51,27 @@ export default defineConfig({
 									{
 										label: 'Objectives',
 										items: [
-											'betonquestaddon/side/objectives'
+											'betonquestaddon/betonquest/objectives'
 										],
 									},
 									{
 										label: 'Conditions',
 										items: [
-											"betonquestaddon/side/conditions"
+											"betonquestaddon/betonquest/conditions"
 										],
 									},
 									{
 										label: 'Events',
 										items: [
-											"betonquestaddon/side/events"
+											"betonquestaddon/betonquest/events"
 										],
 									},
+                                    {
+                                        label: 'Items',
+                                        items: [
+                                            "betonquestaddon/betonquest/items"
+                                        ],
+                                    },
 								],
 							},
 
