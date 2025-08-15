@@ -22,8 +22,7 @@ export default defineConfig({
 									'betonquestaddon/overview/getting-started',
 									'betonquestaddon/overview/commands',
 									'betonquestaddon/overview/default-config',
-									'betonquestaddon/overview/notifys',
-									'betonquestaddon/overview/change-log'
+									'betonquestaddon/overview/notifys'
 								],
 							},
 							{
@@ -45,35 +44,50 @@ export default defineConfig({
 									'betonquestaddon/compatibility/placeholderapi',
 								],
 							},
-							{
-								label: 'BetonQuest Side',
-								items: [
-									{
-										label: 'Objectives',
-										items: [
-											'betonquestaddon/betonquest/objectives'
-										],
-									},
-									{
-										label: 'Conditions',
-										items: [
-											"betonquestaddon/betonquest/conditions"
-										],
-									},
-									{
-										label: 'Events',
-										items: [
-											"betonquestaddon/betonquest/events"
-										],
-									},
-                                    {
-                                        label: 'Items',
-                                        items: [
-                                            "betonquestaddon/betonquest/items"
-                                        ],
-                                    },
-								],
-							},
+                            {
+                                label: 'Configuration',
+                                items: [
+                                    'betonquestaddon/configuration/items',
+                                ],
+                            },
+                            {
+                                label: 'BetonQuest',
+                                items: [
+                                    'betonquestaddon/betonquest/conditions',
+                                    'betonquestaddon/betonquest/events',
+                                    'betonquestaddon/betonquest/items',
+                                    'betonquestaddon/betonquest/objectives'
+                                ],
+                            },
+							// {
+							// 	label: 'BetonQuest Side',
+							// 	items: [
+							// 		{
+							// 			label: 'Objectives',
+							// 			items: [
+							// 				'betonquestaddon/betonquest/objectives'
+							// 			],
+							// 		},
+							// 		{
+							// 			label: 'Conditions',
+							// 			items: [
+							// 				"betonquestaddon/betonquest/conditions"
+							// 			],
+							// 		},
+							// 		{
+							// 			label: 'Events',
+							// 			items: [
+							// 				"betonquestaddon/betonquest/events"
+							// 			],
+							// 		},
+                            //         {
+                            //             label: 'Items',
+                            //             items: [
+                            //                 "betonquestaddon/betonquest/betonquestaddon"
+                            //             ],
+                            //         },
+							// 	],
+							// },
 
 						],
 					},

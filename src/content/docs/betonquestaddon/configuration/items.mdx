@@ -1,0 +1,180 @@
+---
+title: Items
+description: All aspects of BetonQuestAddon item creation
+slug: betonquestaddon/configuration/items
+---
+
+import { FileTree } from '@astrojs/starlight/components';
+
+All aspects of BetonQuestAddon item creation
+
+<FileTree>
+- plugins
+  - BetonQuestAddon
+    - items/
+        - file
+    - config.yml
+</FileTree>
+
+## Full Example Item
+```yaml
+example_item: # id
+  material: DIAMOND_SWORD
+  item_name: "<gold>Epic Diamond Sword"
+  lore:
+    - "<gray>A sword of legends"
+    - "<gray>Shining with power"
+  unbreakable: true
+  unstackable: false
+
+  ItemFlags:
+    - HIDE_ENCHANTS
+    - HIDE_ATTRIBUTES
+  Enchantments:
+    SHARPNESS: 5
+    UNBREAKING: 3
+  rarity: RARE
+  max_stack_size: 1
+  Glider: false
+  damage_resistant: ALWAYS_HURTS_ENDER_DRAGONS
+
+  Components:
+    hide_tooltip: true
+    tooltip_style: "minecraft:italic"
+    item_model: "minecraft:diamond_sword_model"
+    enchantable: 1
+````
+
+---
+
+## Material
+
+```yaml
+material: DIAMOND_SWORD
+```
+
+* Sets the base material of the item.
+* Use the `Material` enum names (e.g., DIAMOND\_SWORD, STONE, etc.).
+
+---
+
+## Item Name
+
+```yaml
+item_name: "<gold>Epic Diamond Sword"
+```
+
+* The display name of the item, using **MiniMessage** format.
+* You can use tags like `<gold>` for color, `<italic>`, `<bold>` for style, etc.
+
+---
+
+## Lore
+
+```yaml
+lore:
+  - "<gray>A sword of legends"
+  - "<gray>Shining with power"
+```
+
+* The item’s lore, also in MiniMessage format.
+* Can include multiple lines as a list.
+
+---
+
+## Unbreakable / Unstackable
+
+```yaml
+unbreakable: true
+unstackable: false
+```
+
+* `unbreakable`: Makes the item unbreakable.
+* `unstackable`: Prevents the item from stacking.
+
+---
+
+## ItemFlags
+
+```yaml
+ItemFlags:
+  - HIDE_ENCHANTS
+  - HIDE_ATTRIBUTES
+```
+
+* A list of Bukkit `ItemFlag`s to apply.
+* Example: `HIDE_ENCHANTS` hides enchantments, `HIDE_ATTRIBUTES` hides attack/defense stats.
+
+---
+
+## Enchantments
+
+```yaml
+Enchantments:
+  SHARPNESS: 5
+  UNBREAKING: 3
+```
+
+* Specifies enchantments and their levels.
+* Applied using `RegistryAccess` to fetch the enchantment objects.
+
+---
+
+## Rarity
+
+```yaml
+rarity: RARE
+```
+
+* The item’s rarity (`COMMON`, `UNCOMMON`, `RARE`, `EPIC`, `LEGENDARY`).
+* Useful for GUIs or special item categorization.
+
+---
+
+## Max Stack Size
+
+```yaml
+max_stack_size: 1
+```
+
+* Sets the maximum stack size for the item.
+* `1` makes it unstackable, like unique items.
+
+---
+
+## Glider
+
+```yaml
+Glider: false
+```
+
+* Available in Minecraft 1.21.3+, determines if the item can act as a glider.
+* `true` enables gliding functionality.
+
+---
+
+## Damage Resistant
+
+```yaml
+damage_resistant: ALWAYS_HURTS_ENDER_DRAGONS
+```
+
+* Available in Minecraft 1.21.3+, uses `DamageTypeTags` to configure damage resistance.
+* Must match the tag name in uppercase.
+
+---
+
+## Components
+
+```yaml
+Components:
+  hide_tooltip: true
+  tooltip_style: "minecraft:italic"
+  item_model: "minecraft:diamond_sword_model"
+  enchantable: 1
+```
+
+* **hide\_tooltip**: Whether to hide the tooltip.
+* **tooltip\_style**: Tooltip style (`minecraft:italic`, `namespace:value`, etc.).
+* **item\_model**: Custom item model (NamespacedKey format).
+* **enchantable**: Level at which the item is enchantable (0+ means enchantable).
