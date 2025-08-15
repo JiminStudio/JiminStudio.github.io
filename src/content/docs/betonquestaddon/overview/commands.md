@@ -37,3 +37,6 @@ This command allows you to display **BetonQuestAddon Items** in the inventory.
 **Permission: `betonquestaddon.command.inventory`**
 
 **Aliases: `inv`**
+:::caution[Nots]
+This is only available for Minecraft 1.21.8 and above.
+:::
