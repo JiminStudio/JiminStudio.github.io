@@ -1,10 +1,10 @@
 ---
 title: Operator
-description: Common with Operator
-slug: betonquestaddon/common/operator
+description: Parser with Operator
+slug: betonquestaddon/parser/operator
 ---
 
-Common with Operator
+Parser with Operator
 
 | Operator | Description                                                               |
 |----------|---------------------------------------------------------------------------|

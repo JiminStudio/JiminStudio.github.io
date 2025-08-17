@@ -26,9 +26,10 @@ export default defineConfig({
 								],
 							},
 							{
-								label: 'Common',
+								label: 'Parser',
 								items: [
-									'betonquestaddon/common/operator'
+									'betonquestaddon/parser/operator',
+									'betonquestaddon/parser/has'
 								],
 							},
 							{
@@ -42,6 +43,7 @@ export default defineConfig({
 									'betonquestaddon/compatibility/itemsadder',
 									'betonquestaddon/compatibility/nexo',
 									'betonquestaddon/compatibility/placeholderapi',
+									'betonquestaddon/compatibility/worldguard',
 								],
 							},
                             {
