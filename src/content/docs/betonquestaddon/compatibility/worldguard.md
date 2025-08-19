@@ -9,6 +9,7 @@ Compatibility with WorldGuard
 - `wgIsOwner`
 - `wgIsMember`
 - `wgFlags`
+- `wgHasOwner`
 
 Checks the owners, members, and flags of a WorldGuard region.
 
@@ -16,6 +17,7 @@ Checks the owners, members, and flags of a WorldGuard region.
 # wgIsOwner [region]
 # wgIsMember [region]
 # wgFlags <region> <hasParser> <flags>
+# wgHasOwner [region]
 
 conditions:
   wgIsOwnerFromHere: wgIsOwner # player's region
@@ -26,4 +28,7 @@ conditions:
   
   wgHasFlagsCheckFromTest2: wgFlags test2 has build
   wgAnyFlagsCheckFromTest2: wgFlags test2 any build,pvp
+
+  wgHasOwnerFromHere: wgHasOwner
+  wgHasOwnerFromTest3: wgHasOwner test3
 ```

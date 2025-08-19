@@ -14,4 +14,4 @@ This page provides a step-by-step guide to setting up and using the BetonQuestAd
 
 # Requirements
  - Paper server `1.21.1+`
- - BetonQuest `3.0.0-DEV` or higher ([download it](https://betonquest.org/3.0-DEV/))
+ - BetonQuest `3.0.0-DEV-380` or higher ([download it](https://betonquest.org/3.0-DEV/))
