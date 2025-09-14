@@ -10,6 +10,7 @@ Compatibility with WorldGuard
 - `wgIsMember`
 - `wgFlags`
 - `wgHasOwner`
+- `wgHasMember`
 
 Checks the owners, members, and flags of a WorldGuard region.
 
@@ -31,4 +32,7 @@ conditions:
 
   wgHasOwnerFromHere: wgHasOwner
   wgHasOwnerFromTest3: wgHasOwner test3
+
+  wgHasMemberFromHere: wgHasMember
+  wgHasMemberFromTest3: wgHasMember test4
 ```
